@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="RelativeLayoutIssue.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cmp="clr-namespace:Microsoft.Maui.Controls.Compatibility;assembly=Microsoft.Maui.Controls">
+    <cmp:RelativeLayout>
+        <Image
+            cmp:RelativeLayout.HeightConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                           Property=Height,
+                                                                           Factor=0.8}"
+            cmp:RelativeLayout.WidthConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+            cmp:RelativeLayout.YConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Height,
+                                                                      Factor=0.2}"
+            Aspect="AspectFill"
+            Source="dotnet_bot.png" />
+        <Border
+            cmp:RelativeLayout.HeightConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                           Property=Height,
+                                                                           Factor=0.2}"
+            cmp:RelativeLayout.WidthConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5}"
+            cmp:RelativeLayout.XConstraint="{cmp:ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width,
+                                                                      Factor=0}"
+            BackgroundColor="Tan">
+            <Label Text="DotNetBotMan" VerticalTextAlignment="Center" />
+        </Border>
+    </cmp:RelativeLayout>
+</ContentPage>
